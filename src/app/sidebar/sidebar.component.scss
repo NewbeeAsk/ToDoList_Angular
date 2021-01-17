@@ -1,0 +1,11 @@
+nav{
+  cursor: pointer;
+  margin-left: 5%;
+  margin-top: 10px;
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  & a{
+    padding: 15px;
+  }
+}
+

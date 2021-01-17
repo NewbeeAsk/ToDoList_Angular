@@ -1,0 +1,45 @@
+@import '../../styles';
+
+.addTaskForm {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: grey;
+  opacity: 95%;
+  padding-top: 20%;
+  display: flex;
+  flex-direction: column;
+  & input[type="text"]{
+    @extend .form-control;
+    margin: 10px 10px 10px 15%;
+    width: 70%;
+  }
+  & input[type="date"]{
+    @extend .form-control;
+    margin: 10px 10px 10px 15%;
+    width: 70%;
+  }
+  .statusDone{
+    margin: 10px 10px 10px 15%;
+    input[type="checkbox"]{
+      @extend .form-check-input;
+      margin-left: 10px;
+    }
+  }
+  & button {
+    @extend .btn;
+    @extend .btn-primary;
+    margin-right: 15%;
+    float: right;
+  }
+}
+.addTaskButton{
+  @extend .btn;
+  @extend .btn-primary;
+  margin: 20px 10px 10px 20px;
+}
+.hide-form{
+  display: none;
+}

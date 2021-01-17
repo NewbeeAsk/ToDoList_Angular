@@ -1,0 +1,15 @@
+<form class="addTaskForm" [class.hide-form]="isHidden()" (submit)="addToDoPoint()">
+  <label>
+    <input placeholder="Title..." class="inputForm" type="text" [(ngModel)]="newTitle" name="title">
+
+    <input placeholder="Description..." class="inputForm" type="text" [(ngModel)]="newDescription" name="description">
+
+    <input class="dataPicker" type="date" [(ngModel)]="newDueDate" name="dueDate">
+    <label class="statusDone">Done?
+      <input class="doneStatus" type="checkbox" [(ngModel)]="newStatusDone" name="done">
+    </label>
+    <button type="button" (click)="hideShowFrom()">CANCEL</button>
+    <button type="submit">ADD TASK</button>
+  </label>
+</form>
+<button [class.hide-form]="!isHidden()" (click)="hideShowFrom()" class="addTaskButton" type="submit">NEW TASK</button>

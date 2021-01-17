@@ -1,0 +1,15 @@
+@import '../styles';
+
+.app-sidebar{
+  margin-top: 50px;
+  & h4{
+    margin-left: 5%;
+    color: steelblue;
+  }
+}
+.main{
+}
+.content{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}

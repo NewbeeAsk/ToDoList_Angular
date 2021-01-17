@@ -1,0 +1,20 @@
+<div class="toDoPointList" *ngFor="let todo of todos; let i = index">
+  <div class="toDoPoint">
+    <div class="toDoPoint-title">{{todo.title}}</div>
+    <div class="toDoPoint-description">{{todo.description}}</div>
+    <label class="toDoPoint-checkbox" *ngIf="todo.done; then done else undone"></label>
+    <ng-template #undone>
+      <label>Done:
+        <input class="statusDone" type="checkbox" (click)="changeStatus(todo)">
+      </label>
+    </ng-template>
+    <ng-template #done>
+      <label>Done:
+        <input class="statusDone" type="checkbox" checked (click)="changeStatus(todo)">
+      </label>
+    </ng-template>
+    <div class="toDoPoint-description">{{todo.dueDate | date:'short'}}</div>
+    <button (click)="deleteTask(todo)">DELETE</button>
+  </div>
+</div>
+

@@ -1,0 +1,3 @@
+<nav *ngFor="let list of todoLists;">
+  <a (click)="getTasksByListEvent(list)" class="navLink">{{list.name}}</a>
+</nav>
